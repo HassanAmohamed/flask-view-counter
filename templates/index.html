@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hit Counter</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif; /* Using a more modern font */
+            background-color: #f0f0f0; /* Slightly lighter background */
+            color: #444; /* Slightly darker text */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Using min-height for better responsiveness */
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            padding: 30px; /* Increased padding for more space */
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Increased shadow for more depth */
+        }
+
+        h1 {
+            font-size: 2.5em; /* Slightly larger heading */
+            margin-bottom: 15px;
+            color: #333; /* Slightly darker heading color */
+        }
+
+        p {
+            font-size: 1.4em; /* Slightly larger paragraph text */
+            color: #666; /* Slightly lighter paragraph color */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello from our app!</h1>
+        <p>I have been seen <strong>{{ count }}</strong> times.</p>
+    </div>
+</body>
+</html>
+
+
+
+

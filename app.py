@@ -1,6 +1,6 @@
 import time  # Import the time module for sleep functionality
 import redis  # Import the redis module for interacting with Redis
-from flask import Flask  # Import the Flask class from the flask module
+from flask import Flask,  render_template   # Import the Flask class from the flask module
 
 # Initialize a Flask application
 app = Flask(__name__)
@@ -26,8 +26,10 @@ def get_hit_count():
 def hello():
     """Handler function for the root URL that returns a greeting and hit count."""
     count = get_hit_count()  # Get the current hit count
-    # Return a formatted string with the hit count
-    return 'Hello From Sona Site, I have been seen {} times.\n'.format(count)
+    # Render the index.html template with the hit count
+    return render_template('index.html', count=count)
+
+
 
 if __name__ == '__main__':
     # Run the Flask application on host 0.0.0.0 and port 5000
