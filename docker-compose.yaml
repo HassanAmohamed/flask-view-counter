@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  web:
+    build: .  # Build the web service image from the current directory ('.')
+    ports:
+      - "9000:5000"  # Map host port 9000 to container port 5000
+    volumes:
+      - .:/app  # Mount the current directory as a volume in the container at '/app' for development purposes
+    environment:
+      FLASK_DEBUG: "true"  # Enable Flask debug mode for development
+  
+  redis:
+    image: "redis:alpine"  # Use the lightweight Redis image based on Alpine Linux
+
+
+
